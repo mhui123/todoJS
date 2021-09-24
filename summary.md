@@ -41,3 +41,50 @@ even though array has been defined as const, can be pushed
     // write as inline is implicit return
 
     sum(1, 3); // 4
+
+### split
+
+- String.split method divides string into an array by splitting words
+
+      ex)
+      let apps = "Calculator,Phone,Contacts";
+      let appsArray = apps.split(",");
+      console.log(appsArray); // ["Calculator", "Phone", "Contacts"]
+
+### substring
+
+- .substring(startIdx, endIdx) : can resize or extract strings;
+
+### replace and replaceAll
+
+- replace() just replace first occurence of been search.
+- replaceAll() replace All occurrences.
+
+### using map at html
+
+```
+const html =`<ul> ${users.map(user =>`<li>${user.name}</li>`).join("")} </ul>`;
+
+console.log(html); // <ul> <li>Sam Doe</li><li>Alex Blue</li> </ul>
+
+if there is no .join(""), result is with "," <ul> <li>Sam Doe</li>,<li>Alex Blue</li> </ul>
+```
+
+### every() , some()
+
+```
+every() is return true when every item satisfied with condition. like with &&
+some() is return true when some item satisfied with condition. like with ||
+```
+
+## splice()
+
+```
+.splice(start[, deleteCount]) removes items from the array
+
+const items = ["Pen", "Paper", "Staples"];
+const deletedItem = items.splice(0, 1); // removes one element at index 0
+console.log(deletedItem); // ["Pen"]
+
+console.log(items); // ["Paper", "Staples"]
+```
